@@ -185,7 +185,7 @@ nappi2.addEventListener('click', function() {
       keho.appendChild(main)
 
       nappi2.addEventListener('click', function() {
-        main.remove()
+        figure.remove()
     })
 
   }
