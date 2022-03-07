@@ -1,6 +1,7 @@
 'use strict';
-let nappi2 = document.querySelector('button');
+let nappi2 = document.getElementById('hakunappi');
 nappi2.addEventListener('click', function() {
+
   let keho = document.querySelector('body');
   let haku2 = document.querySelector('input');
   let main = document.querySelector('main');
@@ -9,12 +10,17 @@ nappi2.addEventListener('click', function() {
 
   fetch(osoite).then(res => res.json()).then(data => {
 
+
+
     let data2 = data.drinks
+
+    data2.length = [8]
 
     console.log(data)
 
     function reseptit (cv, index, data2) {
 
+      let nappirandom = document.getElementById('random')
       let fig = document.createElement('figure');
       let h2 = document.createElement('h2');
       let image = document.createElement('img');
@@ -185,14 +191,16 @@ nappi2.addEventListener('click', function() {
       keho.appendChild(main)
 
       nappi2.addEventListener('click', function() {
-        figure.remove()
+        fig.remove()
     })
+    nappirandom.addEventListener('click', function(){
+        fig.remove()
+      })
 
   }
 
-        data2.forEach(reseptit)
+          data2.forEach(reseptit)
+
 
   })
 })
-
-
