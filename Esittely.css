@@ -8,27 +8,32 @@ body {
     background: #1C2541;
 }
 h3{
+    font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     text-align: center;
     color: white;
 
 }
 h2{
+    font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     padding-left: 2.5%;
     color: white;
 }
 ul{
+    font-family: 'Quicksand', sans-serif;
     padding-left: 4%;
     font-size: 30px;
     color:white;
 }
 h1 {
+    font-family: 'Quicksand', sans-serif;
     font-size: 50px;
     text-align: center;
     color: white;
 }
 p{
+    font-family: 'Quicksand', sans-serif;
     margin: 30px;
     width:45%;
     border-style: solid;
@@ -53,6 +58,7 @@ figure{
 
 }
 figcaption{
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     font-size: 25px;
 }
@@ -60,3 +66,9 @@ figure img {
     width: 100%;
     height: auto;
 }
+video {
+    width:50%;
+    height: auto;
+    padding-left: 2.5%;
+}
+
