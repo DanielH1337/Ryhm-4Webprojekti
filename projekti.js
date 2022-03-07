@@ -1,26 +1,53 @@
 'use strict';
 let nappi2 = document.getElementById('hakunappi');
+
 nappi2.addEventListener('click', function() {
 
+// Search napille event listener jolloin sivulle tulostuu sisältö //
+
+  let nappirandom = document.getElementById('random')
   let keho = document.querySelector('body');
   let haku2 = document.querySelector('input');
   let main = document.querySelector('main');
+
+  // Valitaan elementit joita halutaan käyttää //
+
   let osoite = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + haku2.value;
+
+  // Määritetään osoite mikä syötetään fetch hakuun lisäämällä käyttäjän syöttämä teksti osoitteen perään //
 
 
   fetch(osoite).then(res => res.json()).then(data => {
 
 
-
+    // Toiminto missä sivulle tulee teksti 'No result' kun tuloksia ei löydy //
+    
     let data2 = data.drinks
+    let result = document.createElement('h2')
+        result.innerText = 'No result'
+    if (data2 === null) {
+      main.appendChild(result)
+    }
+
+
+    // Napeille toiminto missä poistetaan 'No result' teksti kun niitä painetaan uudestaan //
+
+      nappi2.addEventListener('click', function() {
+      result.remove()
+    })
+      nappirandom.addEventListener('click', function() {
+        result.remove()
+      })
 
     data2.length = [8]
 
-    console.log(data)
+
+    // Rajoitetaan saaman datan määrä taulukossa 8 kohtaan //
 
     function reseptit (cv, index, data2) {
 
-      let nappirandom = document.getElementById('random')
+      // Funktio minkä avulla voidaan tehdä saamalle datalle ForEach looppi //
+
       let fig = document.createElement('figure');
       let h2 = document.createElement('h2');
       let image = document.createElement('img');
@@ -29,6 +56,8 @@ nappi2.addEventListener('click', function() {
       let instructions = document.createElement('h3')
       const ainesosat = document.createElement('ul')
       let br = document.createElement('br')
+
+      // Luodaan Elementit //
 
       let header = document.createElement('h3')
       header.innerText = 'Type'
@@ -47,6 +76,8 @@ nappi2.addEventListener('click', function() {
       let method = document.createElement('p')
       method.innerText = 'Serve in a ' + data2[index].strGlass + '.'
 
+      // Luodaan ainesosille taulukko niin voi tehdä for loopin null arvon kiertämiseksi //
+
       const ingredients = [];
       ingredients[0] = data2[index].strIngredient1
       ingredients[1] = data2[index].strIngredient2
@@ -63,6 +94,8 @@ nappi2.addEventListener('click', function() {
       ingredients[12] = data2[index].strIngredient13
       ingredients[13] = data2[index].strIngredient14
       ingredients[14] = data2[index].strIngredient15
+
+      // Luodaan ainesosien määrille taulukko niin voi tehdä for loopin null arvon kiertämiseksi //
 
       const measure = [];
       measure[0] = data2[index].strMeasure1;
@@ -91,6 +124,8 @@ nappi2.addEventListener('click', function() {
       }
       measure.forEach(del)
 
+      // For looppi jolla kierretään null arvo //
+
 
         for (let i = 0; i < ingredients.length; i++) {
           let li = document.createElement('li')
@@ -103,6 +138,8 @@ nappi2.addEventListener('click', function() {
               ainesosat.removeChild(li)
             }
           }
+      // For looppi jolla kierretään null arvo //
+
 
       let nappi = document.createElement('button')
       nappi.innerText = 'ENG'
@@ -118,6 +155,8 @@ nappi2.addEventListener('click', function() {
 
       let nappi6 = document.createElement('button')
       nappi6.innerText = 'ES'
+
+      // Tehdään napit millä vaihtaa kieli //
 
 
       nappi3.addEventListener('click', function() {
@@ -153,6 +192,8 @@ nappi2.addEventListener('click', function() {
           p.innerText = data2[index].strInstructionsES
         }
       })
+
+      // If ehto millä kierretään null arvo //
 
       image.src = data2[index].strDrinkThumb
 
@@ -190,16 +231,22 @@ nappi2.addEventListener('click', function() {
       main.appendChild(fig)
       keho.appendChild(main)
 
+      // Elementtien liittäminen //
       nappi2.addEventListener('click', function() {
         fig.remove()
     })
-    nappirandom.addEventListener('click', function(){
+      nappirandom.addEventListener('click', function(){
         fig.remove()
       })
+
+
+      // Nappeihin event missä se poistaa tulostamnsa sisällön mikäli nappia painetaan uudestaan //
 
   }
 
           data2.forEach(reseptit)
+
+    // forEach loop jolla voidaan tehdä kyseinen funktio jokaiseen kohtaan sille datalle mikä saatiin fetchistä //
 
 
   })
