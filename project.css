@@ -4,6 +4,10 @@ h1 {
     font-size: 50px;
     color: #FFFFFF;
 }
+button{
+    height:auto;
+    width:20%;
+}
 #search {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
@@ -12,7 +16,7 @@ h1 {
 
 main {
     opacity: 1;
-    background: #1D3272;
+    background: #30008F;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,7 +33,7 @@ div{
 
 figure {
     border: 20px solid ;
-    border-color: #2191FB;
+    border-color: #5200F5;
     margin: 50px;
     padding: 20px;
     max-width: 15%;
@@ -46,7 +50,9 @@ figure img {
 
 body {
     background-image: url("/img/Drinkki.jpg");
-    background-size: cover;
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-color: #1B0052;
 }
 
 
@@ -54,7 +60,8 @@ body {
 #hakuteksti {
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
-    width: auto;
+    max-width: 20%;
+    height: auto;
 }
 #hakunappi {
     font-family: 'Quicksand', sans-serif;
