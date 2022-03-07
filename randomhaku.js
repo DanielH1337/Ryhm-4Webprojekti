@@ -1,6 +1,7 @@
 'use strict';
 let Randomizer = document.querySelector('#random');
 Randomizer.addEventListener('click', function(){
+  let nappirandom = document.getElementById('hakunappi')
   let Main1 = document.querySelector('main');
   let osoite = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
   let Keho1 = document.querySelector('body');
@@ -180,9 +181,11 @@ Randomizer.addEventListener('click', function(){
       Keho1.appendChild(Main1)
 
       Randomizer.addEventListener('click', function() {
-        Main1.replaceChildren()
+        Figu.remove()
       })
-
+      nappirandom.addEventListener('click', function (){
+        Figu.remove()
+      })
     }
 
     data2.forEach(reseptit)
@@ -191,4 +194,3 @@ Randomizer.addEventListener('click', function(){
 
 
 })
-
