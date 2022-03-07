@@ -6,7 +6,9 @@ h1 {
 }
 button{
     height:auto;
-    width:20%;
+    width:auto;
+    margin: 4%;
+
 }
 #search {
     font-family: 'Quicksand', sans-serif;
@@ -67,6 +69,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     width: auto;
+    margin: 0;
 }
 #random {
     text-align:  center;
@@ -74,17 +77,19 @@ body {
     font-size: 30px;
     width: auto;
     padding-left: 10px;
+    margin: 0;
 }
 p{
     font-family: 'Quicksand', sans-serif;
 }
 h2{
     font-family: 'Quicksand', sans-serif;
+
 }
 h3{
     font-family: 'Quicksand', sans-serif;
+    width: auto;
 }
 li{
     font-family: 'Quicksand', sans-serif;
 }
-
