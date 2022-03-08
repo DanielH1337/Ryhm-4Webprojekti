@@ -36,7 +36,8 @@ p{
     font-family: 'Quicksand', sans-serif;
     margin: 30px;
     width:45%;
-    border-style: solid;
+
+    border: 10px solid ;
     border-color: #2191FB;
     background:white;
     font-size: 25px;
@@ -62,13 +63,25 @@ figcaption{
     text-align: center;
     font-size: 25px;
 }
+video {
+    width: 50%;
+    height: auto;
+    padding-left: 2.5%;
+}
 figure img {
     width: 100%;
     height: auto;
 }
-video {
-    width:50%;
-    height: auto;
+a{
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    display: flex;
+    font-size: 30px;
+    padding-left: 2.5%;
+
+}
+audio {
     padding-left: 2.5%;
 }
+
 
