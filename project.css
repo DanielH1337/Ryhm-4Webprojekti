@@ -11,13 +11,13 @@ button{
 
 }
 #search {
+    font-size: 35px;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     color: #FFFFFF;
 }
 
 main {
-    opacity: 1;
     background: #30008F;
     display: flex;
     flex-wrap: wrap;
@@ -38,7 +38,7 @@ figure {
     border-color: #5200F5;
     margin: 50px;
     padding: 20px;
-    max-width: 15%;
+    width: 15%;
     background: white;
 }
 
@@ -51,7 +51,7 @@ figure img {
 }
 
 body {
-    background-image: url("/img/Drinkki.jpg");
+    background-image: url("/Drinkki.jpg");
     background-size: 100%;
     background-repeat: repeat-x;
     background-color: #1B0052;
@@ -81,6 +81,7 @@ body {
 }
 p{
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 h2{
     font-family: 'Quicksand', sans-serif;
@@ -92,4 +93,5 @@ h3{
 }
 li{
     font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
